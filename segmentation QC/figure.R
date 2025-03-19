@@ -2,7 +2,7 @@ library(ggplot2)
 library(dplyr)
 library(ggbreak)
 
-df <- read.csv("summary.csv")
+df <- read.csv("count.csv")
 
 df_by <- df %>% group_by(pOverlap, group) %>%
   summarise(avg_fScore = mean(fScore),
